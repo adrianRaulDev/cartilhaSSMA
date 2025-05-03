@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introdução – Segurança do Trabalho</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0e0e0e, #1a1a1a);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #141414;
+      padding: 30px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #00c2ff;
+    }
+
+    header h1 {
+      font-size: 2.2em;
+      color: #00c2ff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      color: #ffffffcc;
+      text-decoration: none;
+      margin-left: 30px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #00c2ff;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 60px;
+      gap: 50px;
+      flex: 1;
+    }
+
+    .text-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .text-section h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+
+    .text-section p {
+      font-size: 1.2em;
+      color: #d0d0d0;
+      line-height: 1.8;
+      margin-bottom: 15px;
+    }
+
+    .image-section img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 20px;
+      box-shadow: 0 0 25px #00c2ff77;
+    }
+
+    .section-buttons {
+      margin-top: 30px;
+    }
+
+    .section-buttons a {
+      background: #00c2ff;
+      color: #0e0e0e;
+      padding: 12px 25px;
+      margin-right: 15px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+      box-shadow: 0 0 15px #00c2ff55;
+    }
+
+    .section-buttons a:hover {
+      background: #0e0e0e;
+      color: #00c2ff;
+      border: 2px solid #00c2ff;
+    }
+
+    footer {
+      background: #111;
+      color: #888;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      margin-top: auto;
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        grid-template-columns: 1fr;
+        padding: 30px;
+        text-align: center;
+      }
+
+      .image-section {
+        order: -1;
+      }
+
+      .section-buttons {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Segurança do Trabalho</h1>
+    <nav>
+      <a href="Tela-01.html">Início</a>
+      <a href="Tela-03.html">Normas</a>
+      <a href="Tela-04.html">Riscos</a>
+    </nav>
+  </header>
+
+  <section class="content">
+    <div class="text-section">
+      <h2>O Que é Segurança do Trabalho?</h2>
+      <p>Segurança do Trabalho é um conjunto de práticas e normas que têm como objetivo prevenir acidentes e doenças ocupacionais, promovendo um ambiente mais seguro e saudável para todos os colaboradores.</p>
+      <p>Ela envolve ações que vão desde o uso de Equipamentos de Proteção Individual (EPIs) até a implementação de normas técnicas e treinamentos constantes.</p>
+      <p>Investir em segurança é investir na vida, na produtividade e no bem-estar dos trabalhadores.</p>
+      <div class="section-buttons">
+        <a href="Tela-03.html">Próxima Página</a>
+        <a href="Tela-01.html">Voltar</a>
+      </div>
+    </div>
+    <div class="image-section">
+      <img src="img/pexels-pixabay-162540.jpg" alt="Imagem representando segurança no ambiente de trabalho">
+    </div>
+  </section>
+
+  <footer>
+    © 2025 - Desenvolvido por Tipografia Selvagem • Todos os direitos reservados
+  </footer>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mapa de Riscos – Segurança do Trabalho</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #0d1b2a, #1b263b);
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #0b132b;
+      padding: 30px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #6fffe9;
+    }
+
+    header h1 {
+      font-size: 2.2em;
+      color: #6fffe9;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      color: #b0c4de;
+      text-decoration: none;
+      margin-left: 30px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #6fffe9;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 60px;
+      gap: 50px;
+      flex: 1;
+    }
+
+    .text-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .text-section h2 {
+      font-size: 2.4em;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+
+    .text-section p {
+      font-size: 1.2em;
+      color: #d6e6f2;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .risk-category {
+      background: #132238;
+      border-left: 5px solid #6fffe9;
+      padding: 18px 24px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 12px #6fffe955;
+    }
+
+    .risk-category strong {
+      display: block;
+      font-size: 1.1em;
+      color: #6fffe9;
+      margin-bottom: 8px;
+    }
+
+    .image-section img {
+      width: 100%;
+      max-width: 480px;
+      border-radius: 20px;
+      box-shadow: 0 0 25px #6fffe955;
+    }
+
+    .section-buttons {
+      margin-top: 30px;
+    }
+
+    .section-buttons a {
+      background: #6fffe9;
+      color: #0b132b;
+      padding: 12px 25px;
+      margin-right: 15px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+      box-shadow: 0 0 15px #6fffe955;
+    }
+
+    .section-buttons a:hover {
+      background: transparent;
+      color: #6fffe9;
+      border: 2px solid #6fffe9;
+    }
+
+    footer {
+      background: #0b132b;
+      color: #99aabb;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        grid-template-columns: 1fr;
+        padding: 30px;
+        text-align: center;
+      }
+
+      .image-section {
+        order: -1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Segurança do Trabalho</h1>
+    <nav>
+      <a href="Tela-01.html">Início</a>
+      <a href="Tela-07.html">Sinalização</a>
+      <a href="Tela-09.html">Treinamentos</a>
+    </nav>
+  </header>
+
+  <section class="content">
+    <div class="text-section">
+      <h2>Mapa de Riscos</h2>
+      <p>O mapa de riscos é uma representação gráfica dos perigos existentes no ambiente de trabalho. Ele é essencial para prevenção de acidentes e melhoria das condições de trabalho.</p>
+
+      <div class="risk-category">
+        <strong>Riscos Físicos:</strong>
+        Ruídos, vibrações, radiações, temperaturas extremas.
+      </div>
+
+      <div class="risk-category">
+        <strong>Riscos Químicos:</strong>
+        Poeiras, fumos, neblinas, gases e vapores tóxicos.
+      </div>
+
+      <div class="risk-category">
+        <strong>Riscos Biológicos:</strong>
+        Bactérias, fungos, vírus e parasitas.
+      </div>
+
+      <div class="risk-category">
+        <strong>Riscos Ergonômicos:</strong>
+        Esforço repetitivo, levantamento de peso, postura inadequada.
+      </div>
+
+      <div class="risk-category">
+        <strong>Riscos de Acidente:</strong>
+        Máquinas sem proteção, instalações elétricas expostas, quedas.
+      </div>
+
+      <div class="section-buttons">
+        <a href="Tela-09.html">Próxima Página</a>
+        <a href="Tela-07.html">Voltar</a>
+      </div>
+    </div>
+
+    <div class="image-section">
+      <img src="img/pexels-kseniachernaya-5691642.jpg" alt="Exemplo de Mapa de Riscos">
+    </div>
+  </section>
+
+  <footer>
+    © 2025 - Desenvolvido por Tipografia Selvagem • Todos os direitos reservados
+  </footer>
+</body>
+</html>

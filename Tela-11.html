@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsabilidade Coletiva</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0b0c10, #1f2833);
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #0d1b2a;
+      padding: 30px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 3px solid #45a29e;
+    }
+
+    header h1 {
+      font-size: 2.2em;
+      color: #66fcf1;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      color: #c5c6c7;
+      text-decoration: none;
+      margin-left: 30px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #66fcf1;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 60px;
+      gap: 50px;
+      flex: 1;
+    }
+
+    .text-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .text-section h2 {
+      font-size: 2.5em;
+      margin-bottom: 25px;
+      color: #ffffff;
+    }
+
+    .text-section p {
+      font-size: 1.2em;
+      color: #c5c6c7;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .list-box {
+      background: #11212e;
+      border-left: 4px solid #66fcf1;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 12px #66fcf188;
+    }
+
+    .list-box strong {
+      color: #66fcf1;
+    }
+
+    .image-section img {
+      width: 100%;
+      max-width: 480px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px #45a29e66;
+    }
+
+    .section-buttons {
+      margin-top: 30px;
+    }
+
+    .section-buttons a {
+      background: #66fcf1;
+      color: #0b0c10;
+      padding: 12px 25px;
+      margin-right: 15px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+      box-shadow: 0 0 15px #66fcf199;
+    }
+
+    .section-buttons a:hover {
+      background: transparent;
+      color: #66fcf1;
+      border: 2px solid #66fcf1;
+    }
+
+    footer {
+      background: #0d1b2a;
+      color: #c5c6c7;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        grid-template-columns: 1fr;
+        padding: 30px;
+        text-align: center;
+      }
+
+      .image-section {
+        order: -1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Segurança do Trabalho</h1>
+    <nav>
+      <a href="Tela-01.html">Início</a>
+      <a href="Tela-10.html">EPIs</a>
+      <a href="Tela-12.html">Riscos Ocupacionais</a>
+    </nav>
+  </header>
+
+  <section class="content">
+    <div class="text-section">
+      <h2>Responsabilidade Coletiva pela Segurança</h2>
+      <p>Garantir um ambiente seguro é uma missão compartilhada. A cultura de segurança se constrói com o comprometimento de todos os setores da empresa.</p>
+
+      <div class="list-box"><strong>Engajamento:</strong> Cada colaborador deve estar envolvido nas práticas de segurança.</div>
+      <div class="list-box"><strong>Comunicação:</strong> O diálogo constante evita acidentes e reforça a confiança no ambiente de trabalho.</div>
+      <div class="list-box"><strong>Treinamento:</strong> Aprendizado contínuo fortalece o preparo para lidar com riscos.</div>
+      <div class="list-box"><strong>Exemplo da Liderança:</strong> Gestores conscientes inspiram equipes mais responsáveis.</div>
+
+      <div class="section-buttons">
+        <a href="Tela-12.html">Próxima Página</a>
+        <a href="Tela-10.html">Voltar</a>
+      </div>
+    </div>
+
+    <div class="image-section">
+      <img src="img/pexels-toulouse-10807983.jpg" alt="Responsabilidade Coletiva">
+    </div>
+  </section>
+
+  <footer>
+    © 2025 - Desenvolvido por Tipografia Selvagem • Todos os direitos reservados
+  </footer>
+</body>
+</html>
