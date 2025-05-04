@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Responsabilidade Coletiva</title>
+  <title>Mapeamento de Riscos</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #0b0c10, #1f2833);
+      background: linear-gradient(135deg, #0b0c10, #1e1f26);
       color: #ffffff;
       display: flex;
       flex-direction: column;
@@ -22,7 +22,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 3px solid #45a29e;
+      border-bottom: 3px solid #66fcf1;
     }
 
     header h1 {
@@ -43,34 +43,34 @@
       color: #66fcf1;
     }
 
-    .content {
+    .container {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      gap: 60px;
       padding: 60px;
-      gap: 50px;
       flex: 1;
     }
 
-    .text-section {
+    .left-content, .right-content {
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
 
-    .text-section h2 {
+    h2 {
       font-size: 2.5em;
       margin-bottom: 25px;
       color: #ffffff;
     }
 
-    .text-section p {
+    p {
       font-size: 1.2em;
       color: #c5c6c7;
       line-height: 1.7;
       margin-bottom: 20px;
     }
 
-    .list-box {
+    .highlight-box {
       background: #11212e;
       border-left: 4px solid #66fcf1;
       padding: 20px;
@@ -79,22 +79,22 @@
       box-shadow: 0 0 12px #66fcf188;
     }
 
-    .list-box strong {
+    .highlight-box strong {
       color: #66fcf1;
     }
 
-    .image-section img {
+    .map-image {
       width: 100%;
-      max-width: 480px;
-      border-radius: 20px;
-      box-shadow: 0 0 30px #45a29e66;
+      border-radius: 15px;
+      box-shadow: 0 0 20px #45a29e88;
+      margin-bottom: 20px;
     }
 
-    .section-buttons {
+    .buttons {
       margin-top: 30px;
     }
 
-    .section-buttons a {
+    .buttons a {
       background: #66fcf1;
       color: #0b0c10;
       padding: 12px 25px;
@@ -106,7 +106,7 @@
       box-shadow: 0 0 15px #66fcf199;
     }
 
-    .section-buttons a:hover {
+    .buttons a:hover {
       background: transparent;
       color: #66fcf1;
       border: 2px solid #66fcf1;
@@ -121,14 +121,13 @@
     }
 
     @media (max-width: 768px) {
-      .content {
+      .container {
         grid-template-columns: 1fr;
         padding: 30px;
-        text-align: center;
       }
 
-      .image-section {
-        order: -1;
+      .buttons {
+        text-align: center;
       }
     }
   </style>
@@ -138,29 +137,35 @@
     <h1>Segurança do Trabalho</h1>
     <nav>
       <a href="index.html">Início</a>
-      <a href="Tela-10.html">EPIs</a>
-      <a href="Tela-12.html">Riscos Ocupacionais</a>
+      <a href="Tela-12.html">Riscos</a>
+      <a href="Tela-14.html">EPIs e EPCs</a>
     </nav>
   </header>
 
-  <section class="content">
-    <div class="text-section">
-      <h2>Responsabilidade Coletiva pela Segurança</h2>
-      <p>Garantir um ambiente seguro é uma missão compartilhada. A cultura de segurança se constrói com o comprometimento de todos os setores da empresa.</p>
+  <section class="container">
+    <div class="left-content">
+      <h2>Mapeamento de Riscos</h2>
+      <p>O mapeamento de riscos é uma ferramenta fundamental para a gestão preventiva. Ele permite a visualização clara dos pontos críticos em cada setor da empresa, orientando ações de controle e mitigação.</p>
 
-      <div class="list-box"><strong>Engajamento:</strong> Cada colaborador deve estar envolvido nas práticas de segurança.</div>
-      <div class="list-box"><strong>Comunicação:</strong> O diálogo constante evita acidentes e reforça a confiança no ambiente de trabalho.</div>
-      <div class="list-box"><strong>Treinamento:</strong> Aprendizado contínuo fortalece o preparo para lidar com riscos.</div>
-      <div class="list-box"><strong>Exemplo da Liderança:</strong> Gestores conscientes inspiram equipes mais responsáveis.</div>
+      <div class="highlight-box">
+        <strong>Objetivo:</strong> Identificar, classificar e registrar os riscos por tipo e intensidade em cada ambiente de trabalho.
+      </div>
+      <div class="highlight-box">
+        <strong>Participação:</strong> Deve envolver trabalhadores, CIPA, técnicos de segurança e gestores.
+      </div>
+      <div class="highlight-box">
+        <strong>Resultado:</strong> Criação do Mapa de Risco com ícones e cores específicas para cada tipo de perigo.
+      </div>
 
-      <div class="section-buttons">
+      <div class="buttons">
         <a href="Tela-12.html">Próxima Página</a>
         <a href="Tela-10.html">Voltar</a>
       </div>
     </div>
 
-    <div class="image-section">
-      <img src="img/pexels-toulouse-10807983.jpg" alt="Responsabilidade Coletiva">
+    <div class="right-content">
+      <img src="img/image.png" alt="Exemplo de Mapa de Risco" class="map-image">
+      <img src="img/mapa-de-risco-de-um-laboratorio-de-analises-01.jpg" alt="Mapa de Risco Colorido" class="map-image">
     </div>
   </section>
 

@@ -3,36 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Checklist de Segurança</title>
+  <title>Referências – Segurity Eyes</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
     body {
+      margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to left, #0f2027, #203a43, #2c5364);
+      background: linear-gradient(135deg, #0b0c10, #1f2833);
       color: #ffffff;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
+      padding-top: 100px;
     }
 
     header {
-      background-color: #0d1b2a;
-      padding: 30px 60px;
+      background: linear-gradient(90deg, #1e1e1e, #3a3a3a);
+      padding: 20px 60px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 3px solid #66fcf1;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
     }
 
     header h1 {
-      font-size: 2.2em;
-      color: #66fcf1;
-      letter-spacing: 2px;
+      font-size: 2rem;
+      color: #f97316;
+      font-weight: bold;
     }
 
     nav a {
-      color: #c5c6c7;
+      color: #ffffff;
       text-decoration: none;
       margin-left: 30px;
       font-weight: bold;
@@ -40,149 +42,152 @@
     }
 
     nav a:hover {
-      color: #66fcf1;
+      color: #f97316;
     }
 
     .container {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 60px;
-      padding: 60px;
-      flex: 1;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
     }
 
-    h2 {
-      font-size: 2.5em;
-      margin-bottom: 20px;
-      color: #ffffff;
+    .intro {
+      text-align: center;
+      margin-bottom: 50px;
     }
 
-    p {
-      font-size: 1.2em;
-      color: #c5c6c7;
-      line-height: 1.7;
-      margin-bottom: 20px;
+    .intro h2 {
+      font-size: 40px;
+      color: #f97316;
+      margin-bottom: 10px;
     }
 
-    .checklist {
-      background-color: #11212e;
-      padding: 30px;
+    .intro p {
+      font-size: 18px;
+      color: #cdd6f4;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .ref-list {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      padding: 20px 0;
+    }
+
+    .ref-card {
+      background: #1a1a1a;
+      border-left: 5px solid #f97316;
+      padding: 20px 25px;
       border-radius: 10px;
-      box-shadow: 0 0 20px #66fcf180;
-    }
-
-    .checklist ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    .checklist li {
-      margin-bottom: 15px;
-      font-size: 1.1em;
-      position: relative;
-      padding-left: 30px;
-    }
-
-    .checklist li::before {
-      content: "✔";
-      position: absolute;
-      left: 0;
-      color: #66fcf1;
-      font-size: 1.2em;
-    }
-
-    .right-content img {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 0 20px #66fcf188;
-      margin-bottom: 20px;
-    }
-
-    .buttons {
-      margin-top: 40px;
-    }
-
-    .buttons a {
-      background: #66fcf1;
-      color: #0b0c10;
-      padding: 12px 25px;
-      margin-right: 15px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
+      box-shadow: 0 0 15px rgba(255, 115, 0, 0.1);
+      line-height: 1.6;
       transition: 0.3s;
-      box-shadow: 0 0 15px #66fcf199;
     }
 
-    .buttons a:hover {
-      background: transparent;
-      color: #66fcf1;
-      border: 2px solid #66fcf1;
+    .ref-card:hover {
+      background-color: #232323;
+      box-shadow: 0 0 20px rgba(255, 115, 0, 0.2);
+    }
+
+    .ref-card a {
+      color: #00ffc3;
+      text-decoration: none;
+    }
+
+    .ref-card a:hover {
+      text-decoration: underline;
+    }
+
+    .quote-box {
+      margin-top: 60px;
+      padding: 30px;
+      border-radius: 15px;
+      background: #1e1e1e;
+      text-align: center;
+      color: #ffb366;
+      font-style: italic;
+      font-size: 18px;
     }
 
     footer {
-      background: #0d1b2a;
-      color: #c5c6c7;
       text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
+      color: #888;
+      padding: 40px 20px;
+      font-size: 14px;
     }
 
     @media (max-width: 768px) {
-      .container {
-        grid-template-columns: 1fr;
-        padding: 30px;
-      }
-
-      .buttons {
-        text-align: center;
+      .intro h2 {
+        font-size: 30px;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Segurança do Trabalho</h1>
+    <h1>Segurity Eyes</h1>
     <nav>
       <a href="index.html">Início</a>
-      <a href="Tela-14.html">EPIs</a>
-      <a href="index.html">Voltar ao Início</a>
+      <a href="Tela-14.html">Voltar</a>
     </nav>
   </header>
 
-  <section class="container">
-    <div>
-      <h2>Checklist de Segurança</h2>
-      <p>Auditorias internas são fundamentais para garantir que as práticas de segurança sejam aplicadas corretamente no ambiente de trabalho.</p>
+  <div class="container">
+    <div class="intro">
+      <h2>Fontes e Referências Utilizadas</h2>
+      <p>Esta cartilha foi construída com base em fontes técnicas, acadêmicas e legais. Conheça as principais:</p>
+    </div>
 
-      <div class="checklist">
-        <ul>
-          <li>Funcionários treinados em primeiros socorros</li>
-          <li>Uso correto de EPIs e EPCs</li>
-          <li>Extintores de incêndio revisados</li>
-          <li>Rotas de fuga sinalizadas</li>
-          <li>Iluminação adequada em todas as áreas</li>
-          <li>Máquinas com manutenção em dia</li>
-          <li>Documentação atualizada de segurança</li>
-          <li>Relatórios de acidentes e incidentes organizados</li>
-          <li>Espaços limpos e organizados</li>
-        </ul>
+    <div class="ref-list">
+      <div class="ref-card">
+        1. <strong>BRASIL.</strong> Ministério do Trabalho. <em>Norma Regulamentadora NR-6 – Equipamento de Proteção Individual (EPI).</em> Disponível em:  
+        <a href="https://www.gov.br/trabalho" target="_blank">www.gov.br/trabalho</a>
       </div>
 
-      <div class="buttons">
-        <a href="Tela-16.html">Próxima Página</a>
-        <a href="Tela-14.html">Voltar</a>
+      <div class="ref-card">
+        2. <strong>BRASIL.</strong> Ministério da Economia. <em>eSocial – Manual do Empregador.</em>  
+        Disponível em: <a href="#">https://www.gov.br/esocial</a>
+      </div>
+
+      <div class="ref-card">
+        3. <strong>FERREIRA, Fabiana.</strong> <em>Segurança do Trabalho: Prevenção e Responsabilidade no Ambiente Industrial.</em> 2021.
+      </div>
+
+      <div class="ref-card">
+        4. <strong>SILVA, João C.; OLIVEIRA, Marta R.</strong> <em>Triangulação em Saúde e Segurança do Trabalho.</em> Vol. 5, 2022.
+      </div>
+
+      <div class="ref-card">
+        5. <strong>MOURA, Camila.</strong> <em>Direitos e Deveres do Empregador no Brasil.</em> 2022.
+      </div>
+
+      <div class="ref-card">
+        6. <strong>CASTRO, Daniel et al.</strong> <em>Práticas de Saúde, Segurança e Meio Ambiente em Projeto de Restauração de Manguezal na Baía de Guanabara – RJ.</em> 2022.
+      </div>
+
+      <div class="ref-card">
+        7. <strong>SANTOS, Pedro A.</strong> <em>Sistemas de Gestão Integrada em Meio Ambiente e Segurança do Trabalho.</em> 2020.
+      </div>
+
+      <div class="ref-card">
+        8. <strong>FERNANDES, Mariana.</strong> <em>Uso da Tecnologia para Testes de Avaliação de Prontidão na SST.</em> 2021.
+      </div>
+
+      <div class="ref-card">
+        9. <strong>SILVA, T. M. et al.</strong> <em>Saúde e Segurança no Trabalho: o eSocial como Instrumento Garantidor de Direitos.</em> 2023.
       </div>
     </div>
 
-    <div class="right-content">
-      <img src="img/pexels-icsa-833425-1709003.jpg" alt="Auditoria de Segurança">
-      <img src="img/pexels-pixabay-416322.jpg" alt="Checklist de Inspeção">
+    <div class="quote-box">
+      “Referenciar é respeitar o conhecimento que nos trouxe até aqui.”  
+      <br>— Tipografia Selvagem
     </div>
-  </section>
+  </div>
 
   <footer>
-    © 2025 - Desenvolvido por Tipografia Selvagem • Todos os direitos reservados
+    © 2025 – Desenvolvido por Tipografia Selvagem • Todos os direitos reservados.
   </footer>
 </body>
 </html>

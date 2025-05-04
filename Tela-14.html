@@ -3,36 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>EPIs e EPCs</title>
+  <title>Quem Somos – Segurity Eyes</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #0b0c10, #1f2833);
+      background: linear-gradient(135deg, #0b0c10, #1f2833);
       color: #ffffff;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
+      padding-top: 100px;
     }
 
     header {
-      background-color: #0d1b2a;
-      padding: 30px 60px;
+      background: linear-gradient(90deg, #1e1e1e, #3a3a3a);
+      padding: 20px 60px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 3px solid #45a29e;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
     }
 
     header h1 {
-      font-size: 2.2em;
-      color: #66fcf1;
-      letter-spacing: 2px;
+      font-size: 2rem;
+      color: #f97316;
+      font-weight: bold;
     }
 
     nav a {
-      color: #c5c6c7;
+      color: #ffffff;
       text-decoration: none;
       margin-left: 30px;
       font-weight: bold;
@@ -40,151 +47,214 @@
     }
 
     nav a:hover {
-      color: #66fcf1;
+      color: #f97316;
     }
 
     .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .intro h2 {
+      font-size: 42px;
+      color: #f97316;
+      margin-bottom: 10px;
+    }
+
+    .intro p {
+      font-size: 18px;
+      color: #cdd6f4;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .team-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      padding: 60px;
-      flex: 1;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
     }
 
-    .left-content, .right-content {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+    .member {
+      background: #1a1a1a;
+      padding: 30px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(255, 115, 0, 0.1);
+      transition: 0.3s;
     }
 
-    h2 {
-      font-size: 2.5em;
-      margin-bottom: 25px;
+    .member:hover {
+      box-shadow: 0 0 30px rgba(255, 115, 0, 0.3);
+    }
+
+    .member img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 3px solid #f97316;
+    }
+
+    .member h3 {
+      color: #ffffff;
+      font-size: 22px;
+      margin-bottom: 5px;
+    }
+
+    .member span {
+      font-size: 14px;
+      color: #ffb366;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .member p {
+      font-size: 15px;
+      color: #c5c6c7;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .social-links a {
+      margin: 0 10px;
+      color: #f97316;
+      font-size: 20px;
+      transition: 0.3s;
+    }
+
+    .social-links a:hover {
       color: #ffffff;
     }
 
-    p {
-      font-size: 1.2em;
-      color: #c5c6c7;
-      line-height: 1.7;
-      margin-bottom: 20px;
-    }
-
-    .highlight-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-
-    .highlight-box {
-      background: #11212e;
-      border-left: 4px solid #45a29e;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 12px #45a29e88;
-    }
-
-    .highlight-box strong {
-      color: #66fcf1;
-    }
-
-    .epi-image {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 0 20px #66fcf199;
-      margin-bottom: 20px;
-    }
-
-    .buttons {
-      margin-top: 30px;
-    }
-
-    .buttons a {
-      background: #66fcf1;
-      color: #0b0c10;
-      padding: 12px 25px;
-      margin-right: 15px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-      box-shadow: 0 0 15px #66fcf199;
-    }
-
-    .buttons a:hover {
-      background: transparent;
-      color: #66fcf1;
-      border: 2px solid #66fcf1;
-    }
-
     footer {
-      background: #0d1b2a;
-      color: #c5c6c7;
       text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
+      color: #888;
+      padding: 40px 20px;
+      font-size: 14px;
     }
 
     @media (max-width: 768px) {
-      .container {
-        grid-template-columns: 1fr;
-        padding: 30px;
+      .intro h2 {
+        font-size: 32px;
       }
 
-      .highlight-grid {
+      .team-grid {
         grid-template-columns: 1fr;
-      }
-
-      .buttons {
-        text-align: center;
       }
     }
   </style>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
-    <h1>Segurança do Trabalho</h1>
+    <h1>Segurity Eyes</h1>
     <nav>
       <a href="index.html">Início</a>
-      <a href="Tela-13.html">Mapeamento</a>
-      <a href="Tela-15.html">Checklist</a>
+      <a href="Tela-15.html">Voltar</a>
     </nav>
   </header>
 
-  <section class="container">
-    <div class="left-content">
-      <h2>EPIs e EPCs</h2>
-      <p>Os Equipamentos de Proteção Individual (EPIs) e Coletiva (EPCs) são essenciais para a preservação da integridade física dos trabalhadores.</p>
+  <div class="container">
+    <div class="intro">
+      <h2>Quem Somos</h2>
+      <p>Conheça a equipe responsável por idealizar, desenvolver e construir esta cartilha digital de Segurança do Trabalho.</p>
+    </div>
 
-      <div class="highlight-grid">
-        <div class="highlight-box">
-          <strong>EPIs:</strong> Protetores auriculares, capacetes, luvas, óculos de proteção, máscaras e botas.
-        </div>
-        <div class="highlight-box">
-          <strong>EPCs:</strong> Sinalização, exaustores, barreiras físicas, alarmes e proteção de máquinas.
-        </div>
-        <div class="highlight-box">
-          <strong>Obrigatoriedade:</strong> O fornecimento gratuito dos EPIs é responsabilidade do empregador.
-        </div>
-        <div class="highlight-box">
-          <strong>Treinamento:</strong> É indispensável que o trabalhador saiba usar corretamente seus equipamentos.
+    <div class="team-grid">
+      <!-- Felipe -->
+      <div class="member">
+        <img src="img/Me.jpg" alt="Felipe">
+        <h3>Felipe Ferreira Araújo</h3>
+        <span>Orientando</span>
+        <p>Graduando em Análise e Desenvolvimento de Sistemas pela Universidade Estadual do Maranhão (UEMA)</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
         </div>
       </div>
 
-      <div class="buttons">
-        <a href="Tela-15.html">Próxima Página</a>
-        <a href="Tela-13.html">Voltar</a>
+      <!-- Membro 2 -->
+      <div class="member">
+        <img src="img/Adrian.jpg" alt="Lívia">
+        <h3>Adrian Raul Mendes Ferreira Rodrigues</h3>
+        <span>Orientando</span>
+        <p>Graduando em Análise e Desenvolvimento de Sistemas pela Universidade Estadual do Maranhão (UEMA)</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <!-- Membro 3 -->
+      <div class="member">
+        <img src="img/Other_Pedroca.jpg" alt="Jorge">
+        <h3>Pedro Lucas Morais Matos</h3>
+        <span>Orientando</span>
+        <p>Graduando em Análise e Desenvolvimento de Sistemas pela Universidade Estadual do Maranhão (UEMA)</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <!-- Membro 4 -->
+      <div class="member">
+        <img src="img/IMG-Teacher.jpeg" alt="Andrea Araujo do Carmo">
+        <h3>Andrea Araujo do Carmo</h3>
+        <span>Orientadora</span>
+        <p>Bióloga formada pela UFMA, com mestrado em Engenharia Ambiental (USP), doutorado em Biologia Vegetal (UNESP) e pós-doutorado pelo Instituto de Pesca de SP. Professora Associada da UEMA, onde também atua como superintendente de gestão ambiental. Já foi diretora do CECEN (2007-2014) e pró-reitora de graduação (2015-2018).
+        <div class="social-links">
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <!-- Membro 5 -->
+      <div class="member">
+        <img src="img/Paulin.jpg" alt="Vinícius">
+        <h3>Paulo Yuri Paixão Silva </h3>
+        <span>Orientando</span>
+        <p>Graduando em Análise e Desenvolvimento de Sistemas pela Universidade Estadual do Maranhão (UEMA)</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-behance"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <!-- Membro 6 -->
+      <div class="member">
+        <img src="img/Pedroca.jpg" alt="Ana">
+        <h3>Pedro Vitor Silva de Brito </h3>
+        <span>Orientando</span>
+        <p>Graduando em Análise e Desenvolvimento de Sistemas pela Universidade Estadual do Maranhão (UEMA)</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <!-- Membro 7 -->
+      <div class="member">
+        <img src="img/Millior.jpg" alt="Daniel">
+        <h3>Marcus Antonio Coelho Pereira </h3>
+        <span>Orientando</span>
+        <p>Graduando em Análise e Desenvolvimento de Sistemas pela Universidade Estadual do Maranhão (UEMA)</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
       </div>
     </div>
-
-    <div class="right-content">
-      <img src="img/quais-sao-os-tipos-de-equipamentos-de-protecao-coletiva-individual-2.png" alt="Exemplos de EPIs" class="epi-image">
-      <img src="img/o-que-e-epc.jpg" alt="Exemplos de EPCs" class="epi-image">
-    </div>
-  </section>
+  </div>
 
   <footer>
-    © 2025 - Desenvolvido por Tipografia Selvagem • Todos os direitos reservados
+    © 2025 – Desenvolvido por Tipografia Selvagem • Todos os direitos reservados.
   </footer>
 </body>
 </html>

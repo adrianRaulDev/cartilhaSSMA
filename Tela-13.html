@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mapeamento de Riscos</title>
+  <title>Checklist de Segurança</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #0b0c10, #1e1f26);
+      background: linear-gradient(to left, #0f2027, #203a43, #2c5364);
       color: #ffffff;
       display: flex;
       flex-direction: column;
@@ -45,21 +45,15 @@
 
     .container {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 2fr 1fr;
       gap: 60px;
       padding: 60px;
       flex: 1;
     }
 
-    .left-content, .right-content {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
     h2 {
       font-size: 2.5em;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
       color: #ffffff;
     }
 
@@ -70,28 +64,42 @@
       margin-bottom: 20px;
     }
 
-    .highlight-box {
-      background: #11212e;
-      border-left: 4px solid #66fcf1;
-      padding: 20px;
-      margin-bottom: 20px;
+    .checklist {
+      background-color: #11212e;
+      padding: 30px;
       border-radius: 10px;
-      box-shadow: 0 0 12px #66fcf188;
+      box-shadow: 0 0 20px #66fcf180;
     }
 
-    .highlight-box strong {
+    .checklist ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .checklist li {
+      margin-bottom: 15px;
+      font-size: 1.1em;
+      position: relative;
+      padding-left: 30px;
+    }
+
+    .checklist li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
       color: #66fcf1;
+      font-size: 1.2em;
     }
 
-    .map-image {
+    .right-content img {
       width: 100%;
-      border-radius: 15px;
-      box-shadow: 0 0 20px #45a29e88;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #66fcf188;
       margin-bottom: 20px;
     }
 
     .buttons {
-      margin-top: 30px;
+      margin-top: 40px;
     }
 
     .buttons a {
@@ -137,24 +145,28 @@
     <h1>Segurança do Trabalho</h1>
     <nav>
       <a href="index.html">Início</a>
-      <a href="Tela-12.html">Riscos</a>
-      <a href="Tela-14.html">EPIs e EPCs</a>
+      <a href="Tela-14.html">EPIs</a>
+      <a href="index.html">Voltar ao Início</a>
     </nav>
   </header>
 
   <section class="container">
-    <div class="left-content">
-      <h2>Mapeamento de Riscos</h2>
-      <p>O mapeamento de riscos é uma ferramenta fundamental para a gestão preventiva. Ele permite a visualização clara dos pontos críticos em cada setor da empresa, orientando ações de controle e mitigação.</p>
+    <div>
+      <h2>Checklist de Segurança</h2>
+      <p>Auditorias internas são fundamentais para garantir que as práticas de segurança sejam aplicadas corretamente no ambiente de trabalho.</p>
 
-      <div class="highlight-box">
-        <strong>Objetivo:</strong> Identificar, classificar e registrar os riscos por tipo e intensidade em cada ambiente de trabalho.
-      </div>
-      <div class="highlight-box">
-        <strong>Participação:</strong> Deve envolver trabalhadores, CIPA, técnicos de segurança e gestores.
-      </div>
-      <div class="highlight-box">
-        <strong>Resultado:</strong> Criação do Mapa de Risco com ícones e cores específicas para cada tipo de perigo.
+      <div class="checklist">
+        <ul>
+          <li>Funcionários treinados em primeiros socorros</li>
+          <li>Uso correto de EPIs e EPCs</li>
+          <li>Extintores de incêndio revisados</li>
+          <li>Rotas de fuga sinalizadas</li>
+          <li>Iluminação adequada em todas as áreas</li>
+          <li>Máquinas com manutenção em dia</li>
+          <li>Documentação atualizada de segurança</li>
+          <li>Relatórios de acidentes e incidentes organizados</li>
+          <li>Espaços limpos e organizados</li>
+        </ul>
       </div>
 
       <div class="buttons">
@@ -164,8 +176,8 @@
     </div>
 
     <div class="right-content">
-      <img src="img/image.png" alt="Exemplo de Mapa de Risco" class="map-image">
-      <img src="img/mapa-de-risco-de-um-laboratorio-de-analises-01.jpg" alt="Mapa de Risco Colorido" class="map-image">
+      <img src="img/pexels-icsa-833425-1709003.jpg" alt="Auditoria de Segurança">
+      <img src="img/pexels-pixabay-416322.jpg" alt="Checklist de Inspeção">
     </div>
   </section>
 
